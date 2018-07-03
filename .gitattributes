@@ -1,2 +1,4 @@
 /output/tweet_with_location.csv filter=lfs diff=lfs merge=lfs -text
 output/withplace.json filter=lfs diff=lfs merge=lfs -text
+*.p filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
