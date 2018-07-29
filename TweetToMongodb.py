@@ -8,7 +8,7 @@ from pymongo import MongoClient
 # keywordlist
 
 user = ["@BeijingAir"]
-original = ["air #pollution", "空气污染", "#airpollution", "वायु प्रदुषण", "la pollution de l'air", "la #pollution",
+original = ['@NBA','NBA',"#NBA","air #pollution", "空气污染", "#airpollution", "वायु प्रदुषण", "la pollution de l'air", "la #pollution",
             "air #pollution", "l'air #pollution", "वायु प्रदुषण",'air quality,','smog','changement climatique','#changementclimatique','embouteillage']
 category_1 = ["forest fire", "forest fires"]
 category_2 = ["water poisoning", "water contamination"]
