@@ -1,0 +1,74 @@
+E11000 duplicate key error collection: twitterdb.twitter_search index: _id_ dup key: { : 1024181622378131457 }
+Traceback (most recent call last):
+  File "C:\Users\User\Anaconda3\lib\site-packages\urllib3\contrib\pyopenssl.py", line 280, in recv_into
+    return self.connection.recv_into(*args, **kwargs)
+  File "C:\Users\User\Anaconda3\lib\site-packages\OpenSSL\SSL.py", line 1715, in recv_into
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\User\Anaconda3\lib\site-packages\OpenSSL\SSL.py", line 1521, in _raise_ssl_error
+    raise WantReadError()
+OpenSSL.SSL.WantReadError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Anaconda3\lib\site-packages\urllib3\contrib\pyopenssl.py", line 280, in recv_into
+    return self.connection.recv_into(*args, **kwargs)
+  File "C:\Users\User\Anaconda3\lib\site-packages\OpenSSL\SSL.py", line 1715, in recv_into
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\User\Anaconda3\lib\site-packages\OpenSSL\SSL.py", line 1538, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10054, 'WSAECONNRESET')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Anaconda3\lib\site-packages\urllib3\response.py", line 302, in _error_catcher
+    yield
+  File "C:\Users\User\Anaconda3\lib\site-packages\urllib3\response.py", line 384, in read
+    data = self._fp.read(amt)
+  File "C:\Users\User\Anaconda3\lib\http\client.py", line 449, in read
+    n = self.readinto(b)
+  File "C:\Users\User\Anaconda3\lib\http\client.py", line 483, in readinto
+    return self._readinto_chunked(b)
+  File "C:\Users\User\Anaconda3\lib\http\client.py", line 578, in _readinto_chunked
+    chunk_left = self._get_chunk_left()
+  File "C:\Users\User\Anaconda3\lib\http\client.py", line 546, in _get_chunk_left
+    chunk_left = self._read_next_chunk_size()
+  File "C:\Users\User\Anaconda3\lib\http\client.py", line 506, in _read_next_chunk_size
+    line = self.fp.readline(_MAXLINE + 1)
+  File "C:\Users\User\Anaconda3\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\User\Anaconda3\lib\site-packages\urllib3\contrib\pyopenssl.py", line 296, in recv_into
+    return self.recv_into(*args, **kwargs)
+  File "C:\Users\User\Anaconda3\lib\site-packages\urllib3\contrib\pyopenssl.py", line 285, in recv_into
+    raise SocketError(str(e))
+OSError: (10054, 'WSAECONNRESET')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "TweetToMongodb.py", line 124, in <module>
+    main()
+  File "TweetToMongodb.py", line 113, in main
+    streamer.filter(track=WORDS, follow='5527964')
+  File "C:\Users\User\Anaconda3\lib\site-packages\tweepy\streaming.py", line 450, in filter
+    self._start(async)
+  File "C:\Users\User\Anaconda3\lib\site-packages\tweepy\streaming.py", line 364, in _start
+    self._run()
+  File "C:\Users\User\Anaconda3\lib\site-packages\tweepy\streaming.py", line 297, in _run
+    six.reraise(*exc_info)
+  File "C:\Users\User\Anaconda3\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\User\Anaconda3\lib\site-packages\tweepy\streaming.py", line 266, in _run
+    self._read_loop(resp)
+  File "C:\Users\User\Anaconda3\lib\site-packages\tweepy\streaming.py", line 316, in _read_loop
+    line = buf.read_line().strip()
+  File "C:\Users\User\Anaconda3\lib\site-packages\tweepy\streaming.py", line 181, in read_line
+    self._buffer += self._stream.read(self._chunk_size)
+  File "C:\Users\User\Anaconda3\lib\site-packages\urllib3\response.py", line 401, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "C:\Users\User\Anaconda3\lib\contextlib.py", line 99, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\User\Anaconda3\lib\site-packages\urllib3\response.py", line 320, in _error_catcher
+    raise ProtocolError('Connection broken: %r' % e, e)
+urllib3.exceptions.ProtocolError: ('Connection broken: OSError("(10054, \'WSAECONNRESET\')",)', OSError("(10054, 'WSAECONNRESET')",))
