@@ -112,7 +112,7 @@ if __name__ == '__main__':
     db=population
     # pattern =regx
     start=time.time()
-    print("going to find tweets with place information")
+    print("going to find tweets with language equal to fr information")
     withplace=list(db.find({"lang":'fr'}))
     print("total {} tweets found".format(len(withplace)))
     print("time elaspe ",time.time()-start,' second')
