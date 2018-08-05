@@ -12,7 +12,7 @@ import re
 import numpy as np
 from gmplot import gmplot
 import pickle as pickle
-
+import argparse
 
 # # information extraction
 
@@ -103,6 +103,10 @@ def jsontopandas(tweets_data):
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='get language')
+    parser.add_argument('lan',metavar='L',type= str, help =' desired language eg: en fr hi')
+    args = parser.parse_args()
+
     client=pymongo.MongoClient()
     client.list_database_names()
 
@@ -112,15 +116,15 @@ if __name__ == '__main__':
     db=population
     # pattern =regx
     start=time.time()
-    print("going to find tweets with language equal to fr information")
-    withplace=list(db.find({"lang":'fr'}))
+    print("going to find tweets with language equal to {} information".format(args.lan))
+    withplace=list(db.find({"lang":args.lan}))
     print("total {} tweets found".format(len(withplace)))
     print("time elaspe ",time.time()-start,' second')
 
-    path="../output/frjson.p"
+    path="../output/{}json.p".format(args.lan)
     with open(path, 'bw') as f:
         pickle.dump(withplace, f)
-
+    print ("tweets saved to json")
     tweet_table=jsontopandas(withplace)
-    tweet_table.to_csv("../output/fr.csv",encoding='utf-8',index=False)
-    print ("tweets saved")
+    tweet_table.to_csv("../output/{}.csv".format(args.lan),encoding='utf-8',index=False)
+    print ("tweets saved to csv")

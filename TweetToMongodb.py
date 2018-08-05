@@ -9,7 +9,7 @@ from pymongo import MongoClient
 
 user = ["@BeijingAir"]
 original = ['@NBA','NBA',"#NBA","air #pollution", "空气污染", "#airpollution", "वायु प्रदुषण", "la pollution de l'air", "la #pollution",
-            "air #pollution", "l'air #pollution", "वायु प्रदुषण",'air quality,','smog','changement climatique','#changementclimatique','embouteillage']
+            "air #pollution", "l'air #pollution", "वायु प्रदुषण",'air quality,','smog','changement climatique','#changementclimatique','embouteillage',"#वायु प्रदुषण","वायु #प्रदूषण"]
 category_1 = ["forest fire", "forest fires"]
 category_2 = ["water poisoning", "water contamination"]
 category_3: List[str] = ["flood flash", 'flood water', "flood warning"]
