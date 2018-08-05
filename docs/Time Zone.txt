@@ -1,0 +1,12 @@
+# Time Zone
+GMT (Greenwich Mean Time)
+UTC (Coordinated Universal Time) 
+There is no difference between them.
+
+EST (Eastern Standard Time)
+
+
+# Google trend
+# topic vs searched words
+Using search term in Google Trends has its limitation because it does not capture all variations such as misspellings, spelling variations, synonyms, plural or singular version, or special characters. And more importantly, the semantics of the search term is not captured. That’s why Google introduces topic to improve the result.
+Google Trends has a limited number of topics, for those search terms without a corresponding topics, we need to a taxonomy system to include all the variations in order to capture the true semantics of the search.
