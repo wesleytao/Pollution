@@ -1,4 +1,4 @@
 
-setwd("C:/Users/User/Documents/GitHub/Pollution/lib")
-a=read.csv("../output/tweet_with_location.csv",encoding = 'utf-8')
+setwd("C:/Users/User/Documents/GitHub/Pollution/")
+a=read.csv("merged_data_airparif.csv",encoding = 'utf-8')
 head(a)
